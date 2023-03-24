@@ -17,13 +17,14 @@ args = parser.parse_args()
 
 def gps(file):
 	df = pd.read_csv(file)
-	sv = [0]*178#df ['sv'].tolist()
-	time=[0]*178
-	month=[0]*178
-	day =[0]*178
-	hour=[0]*178
-	minute =[0]*178
-	second=[0]*178
+	l=len(df)
+	sv = [0]*l#df ['sv'].tolist()
+	time=[0]*l
+	month=[0]*l
+	day =[0]*l
+	hour=[0]*l
+	minute =[0]*l
+	second=[0]*l
 	SVclockBias =df['SVclockBias'].tolist()
 	SVclockDrift=df['SVclockDrift'].tolist()
 	SVclockDriftRate=df['SVclockDriftRate'].tolist()
@@ -59,13 +60,14 @@ def gps(file):
 
 def navic(file):
     df = pd.read_csv(file)
-    sv = [0]*121#df ['sv'].tolist()
-    time=[0]*121
-    month=[0]*121
-    day =[0]*121
-    hour=[0]*121
-    minute =[0]*121
-    second=[0]*121
+    l=len(df)
+    sv = [0]*l#df ['sv'].tolist()
+    time=[0]*l
+    month=[0]*l
+    day =[0]*l
+    hour=[0]*l
+    minute =[0]*l
+    second=[0]*l
     SVclockBias = df['SVclockBias'].tolist()
     SVclockDrift = df['SVclockDrift'].tolist()
     SVclockDriftRate = df['SVclockDriftRate'].tolist()
@@ -86,13 +88,13 @@ def navic(file):
     omega = df['omega'].tolist()
     OmegaDot = df['OmegaDot'].tolist()
     IDOT = df['IDOT'].tolist()
-    codesL2 = [0]*121
+    codesL2 = [0]*l
     BDTWeek = df['BDTWeek'].tolist()
-    L2flag = [0]*121
+    L2flag = [0]*l
     URA = df['URA'].tolist()
     health = df['health'].tolist()
     TGD = df['TGD'].tolist()
-    IODC =[0]*121
+    IODC =[0]*l
     TransTime = df['TransTime'].tolist()
     
     
